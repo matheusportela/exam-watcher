@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Watcher</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="exam_watcher.css">
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="d3.min.js"></script>
+    <script src="d3-funnel.min.js"></script>
+    <script src="exam_watcher.js"></script>
+</head>
+
+<body>
+    <div class="page-header">
+        <center>
+            <h1>Exam Watcher</h1>
+        </center>
+    </div>
+
+    <p><center><small>Last update: <span id="last-updated"></span></small></center></p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <center>
+                    <h2>Question Funnel</h2>
+                    <div id="question-funnel"></div>
+                </center>
+            </div>
+            <div class="col-md-8">
+                <center>
+                    <h2>Grades by Question</h2>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <center>
+                                <h4 style="padding-left: 50px">Question 1</h4>
+                                <svg id="question-1-chart" width=150 height=150></svg>
+                            </center>
+                        </div>
+
+                        <div class="col-md-2">
+                            <center>
+                                <h4 style="padding-left: 50px">Question 2</h4>
+                                <svg id="question-2-chart" width=150 height=150></svg>
+                            </center>
+                        </div>
+
+                        <div class="col-md-2">
+                            <center>
+                                <h4 style="padding-left: 50px">Question 3</h4>
+                                <svg id="question-3-chart" width=150 height=150></svg>
+                            </center>
+                        </div>
+
+                        <div class="col-md-2">
+                            <center>
+                                <h4 style="padding-left: 50px">Question 4</h4>
+                                <svg id="question-4-chart" width=150 height=150></svg>
+                            </center>
+                        </div>
+
+                        <div class="col-md-2">
+                            <center>
+                                <h4 style="padding-left: 50px">Question 5</h4>
+                                <svg id="question-5-chart" width=150 height=150></svg>
+                            </center>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <center>
+        <table>
+            <thead>
+                <tr>
+                    <td><b>Question</b></td>
+                    <td><b>Grades</b></td>
+                    <td><b>Submissions</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Question 1</td>
+                    <td id="question-1-statistics-grades"></td>
+                    <td id="question-1-statistics-count"></td>
+                </tr>
+                <tr>
+                    <td>Question 2</td>
+                    <td id="question-2-statistics-grades"></td>
+                    <td id="question-2-statistics-count"></td>
+                </tr>
+                <tr>
+                    <td>Question 3</td>
+                    <td id="question-3-statistics-grades"></td>
+                    <td id="question-3-statistics-count"></td>
+                </tr>
+                <tr>
+                    <td>Question 4</td>
+                    <td id="question-4-statistics-grades"></td>
+                    <td id="question-4-statistics-count"></td>
+                </tr>
+                <tr>
+                    <td>Question 5</td>
+                    <td id="question-5-statistics-grades"></td>
+                    <td id="question-5-statistics-count"></td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
+</html>
